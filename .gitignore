@@ -1,0 +1,42 @@
+# Node modules
+/node_modules/
+# Build output
+/dist/
+/build/
+
+# TypeScript output
+/*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# dotenv environment variable files
+.env
+.env.*.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE or editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# npm package-lock or yarn lock files
+package-lock.json
+yarn.lock
+
+# Parcel cache
+.cache/
+
+# TypeScript Type Definitions (generated)
+*.d.ts
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Debug directory
+/debug/
