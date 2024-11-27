@@ -1,8 +1,6 @@
 # Node modules
 /node_modules/
 # Build output
-/dist/
-/build/
 
 # TypeScript output
 /*.tsbuildinfo
@@ -40,3 +38,4 @@ coverage/
 
 # Debug directory
 /debug/
+.vercel
