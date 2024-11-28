@@ -2,8 +2,8 @@ import { WebSocketServer, WebSocket } from 'ws';  // Import WebSocket type
 import { v4 as uuidv4 } from 'uuid';
 
 // WebSocket server setup
-const port = process.env.PORT || 80;
-const wss = new WebSocketServer({ port: 80 });
+const PORT = process.env.PORT;
+const wss = new WebSocketServer({ port: Number(PORT) });
 const players = new Map<string, { ws: WebSocket, x: number, y: number }>();
 
 wss.on('connection', (ws: WebSocket) => {
@@ -70,4 +70,4 @@ function broadcast(message: any, excludeId?: string) {
     });
 }
 
-console.log("WebSocket server running on ws://localhost:3000");
+console.log(`WebSocket server is running on port ${PORT}`);

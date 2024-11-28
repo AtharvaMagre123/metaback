@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const ws_1 = require("ws"); // Import WebSocket type
 const uuid_1 = require("uuid");
 // WebSocket server setup
-const port = process.env.PORT || 80;
-const wss = new ws_1.WebSocketServer({ port: 80 });
+const PORT = process.env.PORT;
+const wss = new ws_1.WebSocketServer({ port: Number(PORT) });
 const players = new Map();
 wss.on('connection', (ws) => {
     const playerId = (0, uuid_1.v4)(); // Generate unique player ID
@@ -62,4 +62,4 @@ function broadcast(message, excludeId) {
         }
     });
 }
-console.log("WebSocket server running on ws://localhost:3000");
+console.log(`WebSocket server is running on port ${PORT}`);
