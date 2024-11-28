@@ -2,8 +2,8 @@ import { WebSocketServer, WebSocket } from 'ws';  // Import WebSocket type
 import { v4 as uuidv4 } from 'uuid';
 
 // WebSocket server setup
-const port = process.env.PORT || 3000;
-const wss = new WebSocketServer({ port: Number(port) });
+const port = process.env.PORT || 80;
+const wss = new WebSocketServer({ port: 80 });
 const players = new Map<string, { ws: WebSocket, x: number, y: number }>();
 
 wss.on('connection', (ws: WebSocket) => {
